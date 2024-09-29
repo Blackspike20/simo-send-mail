@@ -4,7 +4,8 @@ export interface Config {
     host: string;
     port: number;
     secure: boolean;
-    auth: Auth
+    auth: Auth;
+    tls: TLS;
 }
 
 export interface Languages {
@@ -23,6 +24,10 @@ export interface Auth {
     user: string;
     pass: string;
 }
+
+export interface TLS {
+    rejectUnauthorized: boolean;
+}   
 
 export function init(config: Config, templates: Templates []): Promise<void>;
 export function send(mailId: string, to: string, language: string, data: any): Promise<Transporter>;

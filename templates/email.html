@@ -1,12 +1,442 @@
-<!DOCTYPE html>
-<HTML>
-  <head>
-    <title>Mi primer WEB</title>
-  </head>
-  <body>
-    <div id="una capa">
-      <h1>Hola mundo!</h1>
-      <p>Este es un ejemplo del uso de HTML para crear un documento web que nuestro navegador es capaz de interpretar.</p>
-    </div>
-  </body>  
-</HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SUMA-Air Europa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content ="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <meta name="format-detection" content="date=no"/>
+    <style type="text/css">
+        * {
+            line-height: 100%;
+        }
+
+        #outlook a {
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        #backgroundTable {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+        }
+
+        img {
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        a img {
+            border: none;
+        }
+
+        .imgFix {
+            display: block;
+        }
+
+        img[class="m-showContent"], table[class=m-showContent], tr[class=m-showContent], td[class=m-showContent], div[class=m-showContent], span[class=m-showContent], a[class="m-showContent"], div[class=mShow], div[class=mShow] img {
+            display: none !important;
+            font-size: 0 !important;
+            mso-hide: all;
+        }
+
+        .appleLinks a {
+            color: #cccdcf;
+        }
+
+        .appleLinksWhite a {
+            color: #ffffff;
+        }
+
+        @media only screen and (max-width: 594px ) {
+
+            br[class=mobileHide] {
+                display: none !important;
+            }
+
+            td[class=mobileBlock] {
+                background: #010110;
+                border-bottom: 1px solid #b9b9b9;
+            }
+
+            td[class="fullWidth"] {
+                width: 100% !important;
+                clear: both;
+                display: block;
+                padding: 20px 0 0 0 !important;
+            }
+
+            img[class="fullWidth"] {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            table[class=subBlock] {
+                width: 100% !important;
+            }
+
+            div[class=mShow], div[class=mShow] img, div[class=mShow] table {
+                width: 100% !important;
+                display: block !important;
+            }
+
+            table[id="mainTable"] {
+                width: 100% !important;
+            }
+
+            td[class=headingcell] {
+                width: 100% !important;
+                height: auto !important;
+                display: block !important;
+            }
+
+            td[class=mobileText] {
+                font-size: 13px !important;
+            }
+
+            img[class="m-showContent"], table[class=m-showContent], tr[class=m-showContent], td[class=m-showContent], div[class=m-showContent], span[class=m-showContent], a[class="m-showContent"], div[class=mShow] {
+                float: none !important;
+                height: auto !important;
+                max-height: inherit !important;
+                overflow: visible !important;
+                width: auto !important;
+                display: block !important;
+            }
+
+            img[class="m-hideContent"], table[class=m-hideContent], tr[class=m-hideContent], td[class=m-hideContent], div[class=m-hideContent], span[class=m-hideContent], a[class="m-hideContent"] {
+                display: none !important;
+                mso-hide: all;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            td[class="cellWidth25"] {
+                width: 60px !important;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+
+            td[class=mobileText] {
+                font-size: 13px !important;
+            }
+
+            td[class="cellWidth60"] {
+                width: 16px !important;
+            }
+
+            td[class="cellWidth25"] {
+                width: 40px !important;
+            }
+        }
+    </style>
+</head>
+<body bgcolor="#eeeeee">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ddd" id="backgroundTable">
+    <tr>
+        <td align="center" valign="top">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="690" id="mainTable" bgcolor="#ffffff">
+                <tr>
+                    <td valign="top" >
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" >
+                            <tr>
+                                <td valign="top" class="headingcell" style="background-color: #0078bc;" th:styleappend="'background-color: ' + ${loyaltyUser.loyaltyCard.color}">
+                                    <!--[if !mso]><!-->
+                                    <div style="display: none; height: 0; font-size:0; max-height: 0; overflow: hidden; width: 0;" class="mShow">
+                                        <img th:src="${logoMobile}" alt="Air Europa Suma" class="m-showContent" style="display: block; border:none; width: 100%; height:auto; " />
+                                    </div>
+                                    <!--<![endif]-->
+                                    <img th:src="${logo}" alt="Air Europa Suma" width="690" height="130"  border="0" class="m-hideContent" style="display: block; border:none; width: 100%; height:auto; " />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" >
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" >
+                                        <tr>
+                                            <td>
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td valign="top" width="35" class="cellWidth60" style="width:8%" >
+                                                            <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                                        </td>
+                                                        <td align="left" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td align="justify" style="line-height:1.4;color: #4b4b48; text-decoration: none; font-size: 18px; font-family: Arial, Tahoma, Geneva, sans-serif; line-height:1.4; padding: 50px 0 50px 0;">
+
+                                      <span th:text="#{partners.aireuropa.mail.clientNumber}">
+                                        Nº cliente SUMA:
+                                      </span>
+                                                                        <b style="font-size: 18px; color: #4b4b48; line-height: 1.3;">
+                                        <span th:text="${loyaltyUser.id}">
+                                          {{voucher}}
+                                        </span>
+                                                                        </b>
+
+                                                                        <br/>
+                                                                        <br/>
+
+                                                                        <span th:text="#{partners.aireuropa.mail.salute}">
+                                        Hola
+                                      </span>
+                                                                        <span th:text="${loyaltyUser.name}">
+                                        Javier
+                                      </span>
+                                                                        &#33;
+
+                                                                        <br/>
+                                                                        <br/>
+
+                                                                        <span th:text="${voucherMessage}">
+                                        Te adjuntamos a continuaci&oacute;n los bonos SUMA, adquiridos a trav&eacute;s de nuestro colaborador AMAZON:
+                                      </span>
+
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" style="line-height:1.4;color: #4b4b48; text-decoration: none; font-size: 18px; font-family: Arial, Tahoma, Geneva, sans-serif; line-height:1.4; padding-bottom: 20px;">
+
+                                      <span th:each="voucher : ${vouchers}">
+
+                                        <span th:text="#{partners.aireuropa.mail.voucher.code}">
+                                          C&oacute;digo BONO:
+                                        </span>
+                                        <b style="font-size: 18px; color: #4b4b48; line-height: 1.3;">
+                                          <span th:text="${voucher.code}">
+                                            A23453
+                                          </span>
+                                        </b>
+
+                                        <br/>
+
+                                        <span th:text="#{partners.aireuropa.mail.voucher.value}">
+                                          Valor:
+                                        </span>
+                                        <b style="font-size: 18px; color: #4b4b48; line-height: 1.3;">
+                                          <span th:text="${#numbers.formatInteger(voucher.voucherProductType.price, 1)}">
+                                            10
+                                          </span>
+                                          EUR
+                                        </b>
+
+                                        <br/>
+
+                                        <span th:text="#{partners.aireuropa.mail.voucher.controlCode}">
+                                          C&oacute;digo de control:
+                                        </span>
+                                        <b style="font-size: 18px; color: #4b4b48; line-height: 1.3;">
+                                          <span th:text="${voucher.controlCode}">
+                                            123
+                                          </span>
+                                        </b>
+
+                                        <br/>
+                                        <br/>
+
+                                      </span>
+
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td valign="top" class="cellWidth60" width="35" style="width:8%"  >
+                                                            <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" >
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" >
+                                        <tr>
+                                            <td>
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td valign="top" width="35" class="cellWidth60" style="width:8%" >
+                                                            <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                                        </td>
+                                                        <td align="left" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td valign="top" class="cellWidth60" width="35" style="width:8%"  >
+                                                                        <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                                                    </td>
+                                                                    <td style="background-color:#0079BC; text-align:center;">
+                                                                        <a th:href="#{partners.aireuropa.mail.suma.advantages.link}" target="_blank" style="display: block; text-decoration: none; padding: 12px 0px 12px 0px;"><span th:text="#{partners.aireuropa.mail.suma.advantages}" style="font-family:Arial;font-size:23px;color:#fff;font-weight:normal;margin-bottom:20px;">EXPLORA LAS VENTAJAS SUMA</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td valign="top" class="cellWidth60" width="35" style="width:8%"  >
+                                                                        <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td valign="top" class="cellWidth60" width="35" style="width:8%"  >
+                                                            <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" >
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" >
+                                        <tr>
+                                            <td>
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td valign="top" width="35" class="cellWidth60" style="width:8%" >
+                                                            <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                                        </td>
+                                                        <td align="left" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td style="line-height:1.4;color: #4b4b48; text-decoration: none; font-size: 16px; font-family: Arial, Tahoma, Geneva, sans-serif; line-height:1.4; padding: 50px 0 50px 0;">
+
+                                      <span th:text="#{partners.aireuropa.mail.contact}">
+                                        Para canjearlo debe indicar el código de bono a la hora de realizar la compra en las oficinas de Halcon Viajes.
+									    <br/>
+                                        <br/>
+										Si tiene cualquier duda, puede contactarnos en el teléfono 911 360 200
+                                      </span>
+                                                                        <br/>
+                                                                        <br/>
+                                                                        <span th:text="#{partners.aireuropa.mail.salute.aireuropa}">
+                                        Recibe un cordial saludo del equipo
+                                      </span>
+                                                                        <b style="font-size: 16px; color: #0079BC; line-height: 1.3;">SUMA-Air Europa</b>
+                                                                        <br/>
+
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td valign="top" class="cellWidth60" width="35" style="width:8%"  >
+                                                            <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td valign="top" width="35" class="cellWidth60" style="width:5%" >
+                                                <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                            </td>
+                                            <td align="left" valign="top">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td height="100" style="text-align:center; line-height:1.3;color: #7c7c7c; text-decoration: none; font-size: 11px; font-family: Arial, Tahoma, Geneva, sans-serif; line-height:1.3;" >
+                                                            <a style="outline:none;" href="http://www.facebook.com/AirEuropa" target="_blank">
+                                                                <img border="0" alt="Air Europa en Facebook" src="http://newsletter.aireuropa.com/20151020_ae_nueva_imagen/es/images/icon_fb.png" />
+                                                            </a>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <a style="outline:none;" href="http://twitter.com/AirEuropa" target="_blank">
+                                                                <img border="0" alt="Air Europa en Twitter" src="http://newsletter.aireuropa.com/20151020_ae_nueva_imagen/es/images/icon_tw.png" />
+                                                            </a>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <a style="outline:none;" href="https://www.youtube.com/AirEuropaUX" target="_blank">
+                                                                <img border="0" alt="Air Europa en YouTube" name="Cont_8" src="http://newsletter.aireuropa.com/20151020_ae_nueva_imagen/es/images/icon_yt.png" />
+                                                            </a>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <a style="outline:none;" href="http://instagram.com/aireuropa" target="_blank"><img border="0" alt="Air Europa en Instagram" src="http://newsletter.aireuropa.com/20151020_ae_nueva_imagen/es/images/icon_ig.png" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" class="cellWidth60" width="35" style="width:5%"  >
+                                                <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td valign="top" width="35" class="cellWidth60" style="width:5%" >
+                                                <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                            </td>
+                                            <td align="left" valign="top">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td style="text-align:center; line-height:1.4;color: #7c7c7c; text-decoration: none; font-size: 12px; font-weight: bold; font-family: Arial, Tahoma, Geneva, sans-serif; line-height:1.4;" >
+                                <span th:text="#{partners.aireuropa.mail.privacy.1}">
+                                  La privacidad de sus datos es importante para nosotros, lea nuestra pol&iacute;tica de
+                                </span>
+                                                            <a th:href="#{partners.aireuropa.mail.privacy.link}" target="_blank" style="color:#0072ce;text-decoration:none;">
+                                  <span th:text="#{partners.aireuropa.mail.privacy.2}">
+                                  privacidad de datos
+                                </span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <td valign="top" class="cellWidth60" height="15" style="width:5%"  >
+                                                        <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                                    </td>
+                                                </table>
+                                            </td>
+                                            <td valign="top" class="cellWidth60" width="35" style="width:5%"  >
+                                                <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#191c21" style="background-color: #191c21;">
+                                        <tr>
+                                            <td valign="top" width="35" class="cellWidth60" style="width:5%" >
+                                                <img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" />
+                                            </td>
+                                            <td align="left" valign="top">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td height="60" style="text-align:center; line-height:1.6;color: #fff; text-decoration: none; font-size: 12px; font-weight: bold; font-family: Arial, Tahoma, Geneva, sans-serif; line-height:1.6;" >
+                                                            &copy; 2015 AIR EUROPA LINEAS AEREAS, S.A.U<br />
+                                                            CTRA. ARENAL &middot; LLUCMAJOR KM, 21.5 - 07620 LLUCMAJOR &middot; Baleares &middot; España
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" class="cellWidth60" width="35" style="width:5%"  ><img src="http://newsletter.aireuropa.com/ae_loyalty/es/images/dot.png" alt="" border="0" width="1" height="1" style="display: block;" class="imgFix" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

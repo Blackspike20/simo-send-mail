@@ -78,7 +78,7 @@ let init = async (config, templates) => {
  * @example
  * await mail.send('MAIL IDENTIFIER','email@domain.com','es',{field:'test'}); * await
  */
-let send = async (mailId, to, language,data= {}) => {
+let send = async (mailId, to, language, data= {}) => {
     let mail = mails.find(o => o.id === mailId);
     if (!mail){
         throw new Error('simo-send-mail mailID not found');
